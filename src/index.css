@@ -1,0 +1,412 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.login-container {
+  height: 100vh;
+  background-color: #DEDEDE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form-container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.ant-form-item-label {
+  font-weight: bold;
+}
+
+.ant-btn-primary {
+  background-color: #1890ff;
+  border-color: #1890ff;
+}
+
+.search-filter-container {
+  padding: 20px;
+}
+
+.search-row {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;  
+}
+
+.search-input {
+  width: 300px;
+}
+
+.custom-button {
+  width: 100px;
+}
+
+@media (max-width: 768px) {
+  .search-row {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .search-input {
+    width: 100%;  
+    margin-bottom: 10px;  
+  }
+
+  .custom-button {
+    width: 100%; 
+  }
+}
+
+@media (max-width: 480px) {
+  .search-input {
+    width: 100%;  
+  }
+
+  .search-row {
+    gap: 5px;
+  }
+}
+
+.header {
+    background-color: black;
+    padding: 10px 40px;
+    color: white;
+}
+
+.header-title {
+    color: white !important;
+    margin: 0 !important;
+    padding: 5px;
+}
+
+.logout-button {
+    width: 50px;
+    background-color: red;
+    border-color: red;
+}
+
+/* Container for the content */
+.content-container {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+}
+
+.left-section {
+    width: 20%;
+}
+
+.left-section .ant-typography {
+    margin-bottom: 10px;
+    margin: 0px;
+}
+
+.right-section {
+    width: 80%;
+}
+
+.left-subcard{
+  margin-top: 5px;
+  width: 40%;
+  justify-content: space-between;
+  cursor: pointer;
+  align-items: center;
+}
+
+.active-tab{
+  border: 1px solid blue;
+  padding: 4px;
+  background-color: white;
+  color: blue;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 20px;
+    }
+
+    .header-title {
+        font-size: 16px;
+        color: white;
+    }
+
+    .logout-button {
+        width: 40px;
+    }
+
+    .content-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+    }
+
+    .left-section {
+        margin-bottom: 20px;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .right-section {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-title {
+        font-size: 14px;
+        color: white;
+    }
+
+    .logout-button {
+        width: 35px;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .right-section {
+        margin-top: 20px;
+    }
+}
+
+ .card-container {
+    display: flex;
+    justify-content: center;  
+    flex-wrap: wrap;
+    gap: 20px;  
+    padding: 0 20px; 
+}
+
+
+.card-container .ant-card {
+    position: relative;
+    background-color: white;  
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 25%;  
+    transition: transform 0.3s ease-in-out;  
+    margin: 0;  
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+}
+
+.avatar-container {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 16px;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;  
+    border: 3px solid #f0f0f0; 
+}
+
+.user-info {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.user-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.user-email {
+    font-size: 14px;
+    color: gray;
+}
+
+/* Overlay effect */
+.card-overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);  
+    justify-content: center;
+    align-items: center;
+    gap: 16px; 
+    padding: 20px;
+}
+
+.overlay-button {
+    border-radius: 50%;
+    width: 40px !important;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-button{
+  background-color: #1890ff;
+}
+
+.edit-button:hover{
+  background-color: #1890ff !important;
+  color: white !important;
+}
+
+.delete-button{
+  background-color: red !important;
+}
+
+.delete-button:hover{
+  background-color: red !important;
+  color: white !important;
+}
+
+.custom-card:hover .card-overlay {
+    display: flex;  
+}
+ 
+.custom-card:hover {
+    transform: none; 
+    box-shadow: none;  
+}
+
+@media (max-width: 768px) {
+    .card-container .ant-card {
+        max-width: 100%; 
+        margin: 0 10px; 
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: column; 
+        gap: 10px;  
+    }
+
+    .card-container .ant-card {
+        width: 100%;
+    }
+}
+
+ 
+@media (min-width: 768px) {
+    .card-container {
+      width: 95%;
+      margin: auto;
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-between; 
+    }
+}
+
+.form-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-header h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.close-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: gray;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.required {
+    color: red;
+}
+
+input {
+    width: 98%;
+    padding: 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #4A90E2;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
