@@ -67,8 +67,6 @@ const Home = () => {
     }
 
     const handleLogout = () => {
-        navigate('/login');
-        localStorage.clear()
         localStorage.removeItem('userData')
         window.location.reload();
     }
